@@ -1,1 +1,121 @@
-sorry
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry, Manali ❤️</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        .apology-text {
+            font-size: 2.5em;
+            color: #ff4d4d;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .heart {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: relative;
+            margin: 20px auto;
+            transform: rotate(-45deg);
+            animation: heartbeat 1s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 25px;
+            top: 0;
+        }
+
+        .message {
+            font-size: 1.2em;
+            color: #333;
+            animation: floatText 2s infinite alternate;
+        }
+
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #ff1a1a;
+        }
+
+        #hiddenMessage {
+            font-size: 1.3em;
+            color: #ff4d4d;
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1) rotate(-45deg); }
+            50% { transform: scale(1.2) rotate(-45deg); }
+            100% { transform: scale(1) rotate(-45deg); }
+        }
+
+        @keyframes floatText {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="apology-text">I'm Sorry, Mannaa ! 💖</h1>
+        <div class="heart"></div>
+        <p class="message">I didn't mean to upset you. Please forgive me! 🥲</p>
+        <button id="revealMessage">Click for a Special Message</button>
+        <p id="hiddenMessage">You mean the world to me, and I promise to be better love u . ❤️</p>
+    </div>
+
+    <script>
+        document.getElementById("revealMessage").addEventListener("click", function() {
+            document.getElementById("hiddenMessage").style.display = "block";
+            this.style.display = "none"; // Hide the button after clicking
+        });
+    </script>
+</body>
+</html>
